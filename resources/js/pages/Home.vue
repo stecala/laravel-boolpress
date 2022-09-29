@@ -10,7 +10,9 @@
             Next Page
         </div>
     </div>
-    <PostComponent v-for="post in posts" :key="post.id" :post='post'  class="my-5"/>
+    <div class="flex-wrap d-flex">
+        <PostComponent v-for="post in posts" :key="post.id" :post='post'  class="my-5"/>
+    </div>
 </div>
 </template>
 
@@ -85,5 +87,6 @@ export default {
 <style scoped lang="scss">
    .wrapper{
     background-color: lightblue;
+    overflow: hidden;
    }
 </style>

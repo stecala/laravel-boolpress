@@ -60,6 +60,14 @@ class PostController extends Controller
     public function show($id)
     {
         //
+        $post=Post::with('user')->findOrFail($id);
+
+        return response()->json([
+            'response'=>true,
+            'results'=>[
+                    'data'=>$post
+                ]
+        ]);
     }
 
     /**

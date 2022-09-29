@@ -6,7 +6,7 @@
                 <div class="dark-filter"></div>
                 <div class="text-cont px-3 text-center">
                     <router-link :to='`/post/${post.id}`'>
-                        {{ post.description }}
+                        {{ post.description.substring(0,20) }}...
                     </router-link>
 
                 </div>
@@ -68,7 +68,7 @@
         }
         .dark-filter{
             height: 100%;
-            background-image: linear-gradient(black, transparent);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.76), transparent);
             z-index: 1;
         }
         .text-cont{
