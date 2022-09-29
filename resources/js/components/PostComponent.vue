@@ -50,6 +50,9 @@
         img{
             border-radius: 10px 10px 0 0;
             width: 100%;
+            height: 281px;
+            object-fit: cover;
+            object-position: center;
             position: relative;
             z-index: 0;
         }
