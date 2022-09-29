@@ -32,7 +32,7 @@ export default {
 
 <style lang='scss'>
    header{
-        box-shadow: 5px 0 10px rgba(0, 0, 0, 0.527);
+        box-shadow: 5px 0 10px rgb(0, 0, 0);
         position: fixed;
         width: 100%;
         background-color: white;

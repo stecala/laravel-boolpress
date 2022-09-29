@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h2>
-        ABOUT US
-    </h2>
+  <div class="jumbo d-flex justify-content-center align-items-center">
+    <span class="ms-text">
+       ABOUT US
+    </span>
   </div>
 </template>
 
@@ -12,6 +12,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .jumbo{
+    background-color: lightcoral;
+    width: 100%;
+    height: calc(100vh - 83.19px);
+   
+  }
 </style>

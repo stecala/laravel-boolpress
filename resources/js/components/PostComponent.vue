@@ -1,6 +1,6 @@
 <template>
-    <div class="container-lg card">
-      <div class="row">
+    <div class="card">
+<!--       <div class="row">
         <div class="col-12 author">
            <h2 class="">
                 {{ post.user.name }}
@@ -15,7 +15,7 @@
         <div class="col-12 date mt-3">
             {{ post.post_date }}
         </div>
-      </div>
+      </div> -->
     </div>
 </template>
 
@@ -39,8 +39,12 @@
 <style lang="scss" scoped>
 
 .card{
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
     padding: 20px 75px;
+    border: 1px solid grey;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
     .author{
         padding: 0 10px;
         border-bottom: 1px solid black;

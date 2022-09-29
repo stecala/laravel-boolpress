@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="py-5 wrapper">
     <div class="container-lg">
         <label for="filter" class="d-block">Cerca elemento del post</label>
         <input type="text" placeholder="filtro elementi nel post" @keyup.enter="ApiCallFilterPosts()" v-model="search" name="filter">
@@ -82,6 +82,8 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped lang="scss">
+   .wrapper{
+    background-color: lightseagreen;
+   }
 </style>

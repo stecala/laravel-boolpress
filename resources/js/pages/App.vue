@@ -17,7 +17,10 @@ export default {
 </script>
 
 <style lang="scss" > 
- main{
-        padding-top: 105px;
+ .ms-text{
+      font-size: 4rem;
+      font-weight: 600;
+      color: white;
+      text-shadow: 5px 5px rgba(0, 0, 0, 0.342);
     }
 </style>
