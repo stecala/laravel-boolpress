@@ -1,7 +1,17 @@
 <template>
     <div>
-        <HeaderComponent />
+        <HeaderComponent  />
         <main>
+            <div class="container-lg">
+                <label for="filter" class="d-block">Cerca elemento del post</label>
+                <input type="text" placeholder="filtro elementi nel post" @keyup.enter="ApiCallFilterPosts()" v-model="search" name="filter">
+                <div class="prev-page btn btn-info" @click="goPrevPage()">
+                    Prev Page
+                </div>
+                <div class="next-page btn btn-info" @click="goNextPage()">
+                    Next Page
+                </div>
+            </div>
             <PostComponent v-for="post in posts" :key="post.id" :post='post'  class="my-5"/>
         </main>
     </div>

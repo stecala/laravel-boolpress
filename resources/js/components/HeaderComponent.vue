@@ -1,11 +1,5 @@
 <template>
   <header class="position-relative">
-            <div class="prev-page btn btn-info" @click="goPrevPage()">
-                Prev Page
-            </div>
-            <div class="next-page btn btn-info" @click="goNextPage()">
-                Next Page
-            </div>
             <div class="container-lg py-3">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-3">
@@ -13,8 +7,11 @@
                             Boolpress
                         </h1>
                     </div>
-                    <div class="col-6">
-                        <input type="text" placeholder="filtro elementi nel post" @keyup.enter="ApiCallFilterPosts()" v-model="search">
+                    <div class="col-2">
+                        
+                    </div>
+                    <div class="col-2">
+
                     </div>
                     <div class="col-2">
                         <a href="http://127.0.0.1:8000/admin" class="btn btn-info">Backoffice</a>
@@ -25,8 +22,8 @@
 </template>
 
 <script>
-export default {
 
+export default {
 }
 </script>
 

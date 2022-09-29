@@ -5,12 +5,12 @@ Vue.use(VueRouter)
 
 //importiamo le singole pagine
 import About from './pages/About';
-ecc
+import Home from './pages/App';
 
 const router = new VueRouter({
 	mode: 'history',
 	routes: [
-	/* 	{
+		{
 			path:'/',
 			name: 'home',
 			component: Home		
@@ -20,11 +20,6 @@ const router = new VueRouter({
 			name: 'about',
 			component: About,
 		},
-		{
-			path: '/posts/:id',
-			name: 'posts.show',
-			component: SinglePost
-		}*/
 	] 
 })
 
