@@ -21,18 +21,20 @@ export default {
 
 <style lang='scss'>
  .center-page{
-        /* position: absolute;
+       position: absolute;
         top: calc(50% - 200px);
-        left: calc(50% - 200px) ; */
+        left: calc(50% - 200px) ;
         .container{
             width: 400px;
             height: 400px;
             .box1{
                 width: 200px;
                 height: 200px;
-                border-radius: 10px;
                 animation: Slide1 linear 2s infinite;
                 margin: 5px;
+                img{
+                    border-radius: 50%;
+                }
             }
             .box2-cont{
                 width: 400px;
@@ -42,9 +44,10 @@ export default {
                 .box2{
                     width:50%;
                     height:100%;
-                    border-radius: 10px;
                     animation: Slide2 linear 2s infinite;
-
+                    img{
+                        border-radius: 50%; 
+                    }
                 }
             }
             @keyframes Slide1{
