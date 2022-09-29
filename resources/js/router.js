@@ -5,7 +5,8 @@ Vue.use(VueRouter)
 
 //importiamo le singole pagine
 import About from './pages/About';
-import Home from './pages/App';
+import Home from './pages/Home';
+import Contacts from './pages/Contacts';
 
 const router = new VueRouter({
 	mode: 'history',
@@ -16,9 +17,14 @@ const router = new VueRouter({
 			component: Home		
 		},
 		{
-			path: 'about',
+			path: '/about',
 			name: 'about',
 			component: About,
+		},
+        {
+			path: '/contacts',
+			name: 'contacts',
+			component: Contacts,
 		},
 	] 
 })
