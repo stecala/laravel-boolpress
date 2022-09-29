@@ -1,6 +1,7 @@
 <template>
 <div class="py-5 wrapper">
-    <div class="container-lg">
+    <LoaderComponent v-if="isLoading"/>
+    <div class="container-lg" v-else>
         <label for="filter" class="d-block">Cerca elemento del post</label>
         <input type="text" placeholder="filtro elementi nel post" @keyup.enter="ApiCallFilterPosts()" v-model="search" name="filter">
         <div class="prev-page btn btn-info" @click="goPrevPage()">
@@ -10,19 +11,23 @@
             Next Page
         </div>
     </div>
+
     <div class="flex-wrap d-flex">
         <PostComponent v-for="post in posts" :key="post.id" :post='post'  class="my-5"/>
     </div>
+
 </div>
 </template>
 
 <script>
 import PostComponent from '../components/PostComponent.vue';
+import LoaderComponent from '../components/LoaderComponent.vue';
 import axios from 'axios';
 
 export default {
     components:{
         PostComponent,
+        LoaderComponent,
     },
     data: function(){
         return{
@@ -30,6 +35,7 @@ export default {
             search: '',
             urlNext : '',
             ulrPrev : '',
+            isLoading: true,
         }
     },
     methods: {
@@ -42,6 +48,7 @@ export default {
                 this.urlNext=result.data.results.data.next_page_url
                 this.urlPrev=result.data.results.data.last_page_url
                 console.log(result.data.results)
+                this.isLoading= false
             })
             .catch((error)=>{
                 console.error(error)
@@ -88,5 +95,12 @@ export default {
    .wrapper{
     background-color: lightblue;
     overflow: hidden;
+    min-height: calc(100vh - 83px);
    }
+
+
+
+
+    
+
 </style>

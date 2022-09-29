@@ -1,6 +1,7 @@
 <template>
    <div>
-        <div v-if="post">
+        <LoaderComponent v-if="isLoading" />
+        <div v-else>
             <div class="single-card container-lg">
                 <div class="row">
                     <div class="col-12 text-center author">
@@ -24,11 +25,15 @@
 
 <script>
 import axios from 'axios';
+import LoaderComponent from '../components/LoaderComponent.vue'
 export default {
+    components:{
+        LoaderComponent,
+    },
     data: function(){
         return{
             post: null,
-            search: '',
+            isLoading: true,
         }
     },
     methods: {
@@ -39,6 +44,7 @@ export default {
             .then((result)=>{
                 this.post=result.data.results.data;
                 console.warn(this.post)
+                this.isLoading=false
             })
             .catch((error)=>{
                 console.error(error)
