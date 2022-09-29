@@ -2151,7 +2151,26 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "card"
-  });
+  }, [_c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col-12 img-cont position-relative"
+  }, [_c("img", {
+    attrs: {
+      src: _vm.ValidURL(_vm.post.img_post) ? _vm.post.img_post : "/storage/" + _vm.post.img_post,
+      alt: "img_post"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "dark-filter"
+  }), _vm._v(" "), _c("div", {
+    staticClass: "text-cont text-white px-3 text-center"
+  }, [_vm._v("\n                    " + _vm._s(_vm.post.description) + "\n            ")])]), _vm._v(" "), _c("div", {
+    staticClass: "col-12"
+  }, [_c("div", {
+    staticClass: "text-center name"
+  }, [_vm._v("\n                " + _vm._s(_vm.post.user.name) + "\n            ")]), _vm._v(" "), _c("div", {
+    staticClass: "date"
+  }, [_vm._v("\n                " + _vm._s(_vm.post.post_date) + "\n            ")])])])]);
 };
 
 var staticRenderFns = [];
@@ -2361,7 +2380,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-54a00d62] {\n  padding: 20px 75px;\n  border: 1px solid grey;\n  background-color: rgb(236, 236, 236);\n  border-radius: 10px;\n  max-width: 500px;\n  margin: 0 auto;\n}\n.card .author[data-v-54a00d62] {\n  padding: 0 10px;\n  border-bottom: 1px solid black;\n}\n.card .author h2[data-v-54a00d62] {\n  font-weight: 600;\n}\n.card .date[data-v-54a00d62] {\n  font-size: 0.8rem;\n}", ""]);
+exports.push([module.i, ".card[data-v-54a00d62] {\n  border: 1px solid grey;\n  background-color: rgb(236, 236, 236);\n  border-radius: 10px;\n  max-width: 500px;\n  margin: 0 auto;\n}\n.card .img-cont img[data-v-54a00d62] {\n  border-radius: 10px 10px 0 0;\n  width: 100%;\n  position: relative;\n  z-index: 0;\n}\n.card .img-cont .dark-filter[data-v-54a00d62], .card .img-cont .text-cont[data-v-54a00d62] {\n  position: absolute;\n  top: 0;\n  left: 15px;\n  border-radius: 10px 10px 0 0;\n  width: calc(100% - 30px);\n}\n.card .img-cont .dark-filter[data-v-54a00d62] {\n  height: 100%;\n  background-image: linear-gradient(black, transparent);\n  z-index: 1;\n}\n.card .img-cont .text-cont[data-v-54a00d62] {\n  font-size: 1.3rem;\n  text-shadow: 2px 2px rgba(255, 255, 255, 0.301);\n  z-index: 2;\n}\n.card .name[data-v-54a00d62] {\n  border-top: 1px solid gray;\n  padding: 15px;\n}\n.card .date[data-v-54a00d62] {\n  font-size: 0.7rem;\n  padding: 2px 5px;\n}", ""]);
 
 // exports
 
