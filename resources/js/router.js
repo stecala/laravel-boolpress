@@ -7,6 +7,8 @@ Vue.use(VueRouter)
 import About from './pages/About';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
+import Post from './pages/Post';
+
 
 const router = new VueRouter({
 	mode: 'history',
@@ -25,6 +27,11 @@ const router = new VueRouter({
 			path: '/contacts',
 			name: 'contacts',
 			component: Contacts,
+		},
+		{
+			path: '/post/:id',
+			name: 'post',
+			component: Post,
 		},
 	] 
 })

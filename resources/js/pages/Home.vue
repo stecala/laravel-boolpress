@@ -84,6 +84,6 @@ export default {
 
 <style scoped lang="scss">
    .wrapper{
-    background-color: lightseagreen;
+    background-color: lightblue;
    }
 </style>

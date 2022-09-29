@@ -4,8 +4,11 @@
             <div class="col-12 img-cont position-relative">
                 <img :src=" ValidURL(post.img_post) ? post.img_post : '/storage/' + post.img_post " alt="img_post">
                 <div class="dark-filter"></div>
-                <div class="text-cont text-white px-3 text-center">
+                <div class="text-cont px-3 text-center">
+                    <router-link :to='`/post/${post.id}`'>
                         {{ post.description }}
+                    </router-link>
+
                 </div>
             </div>
             <div class="col-12 ">
@@ -72,6 +75,9 @@
             font-size: 1.3rem;
             text-shadow: 2px 2px rgba(255, 255, 255, 0.301);
             z-index: 2;
+            a{
+                color: white;
+            }
         }   
     }
     .name{
