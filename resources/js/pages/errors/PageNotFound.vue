@@ -21,7 +21,7 @@
     <div class="eye-s" id="right-s"></div>
     <div class="white-dot" id='left-w'></div>
     <div class="white-dot" id='right-w'></div>
-    <div class="mouth-s"></div>
+    <div id="mouth-s" :class=" animationMouth ? 'animationMouth' : '' "></div>
 
     <!-- signal -->
     <div class="signal-cont"><div><h1>404</h1></div></div>
@@ -39,7 +39,24 @@
 
 <script>
 export default {
+    data: function(){
+        return{
+            animationMouth: false,
+        }
+    },
+    methods:{
+        setClassSun(){
+           setInterval(()=>{
+                this.animationMouth = !this.animationMouth
+                console.log(this.animationMouth)
 
+           },1800)
+        }
+    
+    },
+    created(){
+        this.setClassSun()
+    }
 }
 </script>
 
@@ -171,7 +188,7 @@ export default {
         #left-w{
             right: 92px;
         }
-        .mouth-s{
+        #mouth-s{
             position: absolute;
             top: 90px;
             right: 83px;
@@ -179,8 +196,16 @@ export default {
             height: 9px;
             background-color: rgb(204, 26, 26);
             border-radius: 50%;
+            
         }
-
+        .animationMouth{
+            animation: closeM 2s linear;     
+        }
+        @keyframes closeM {
+            0%{height: 9px;}
+            50%{height: 0px;}
+            100%{height: 9px;}
+        }
         /* signal */
        .signal-cont{
             width: 200px;
@@ -213,7 +238,7 @@ export default {
             transform: rotate(90deg);
             position: absolute;
             top: 53%;
-            left: 555px;
+            left: 554px;
         }
         .leg{
             position: absolute;
