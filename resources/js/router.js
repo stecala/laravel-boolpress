@@ -8,7 +8,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
 import Post from './pages/Post';
-
+import PageNotFound from './pages/errors/PageNotFound'
 
 const router = new VueRouter({
 	mode: 'history',
@@ -33,6 +33,11 @@ const router = new VueRouter({
 			name: 'post',
 			component: Post,
 		},
+		{
+			path: '*',
+			name: 'pageNotFound',
+			component: PageNotFound,
+		}
 	] 
 })
 
