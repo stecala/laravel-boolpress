@@ -1,16 +1,17 @@
 <template>
+<div class="bg-my">
   <div class="container-lg cont-img position-relative">
 
     <!-- cloud -->
-    <div class="c1"></div>
-    <div class="c2"></div>
-    <div class="c3"></div>
-    <div class="c4"></div>
-    <div class="c5"></div>
-    <div class="c6"></div>
-    <div class="eye-c" id="left"></div>
-    <div class="eye-c" id="right"></div>
-    <div class="mouth-c"></div>
+    <div class="c1" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="c2" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="c3" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="c4" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="c5" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="c6" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="eye-c" id="left" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="eye-c" id="right" :class="animationCloud ? 'animationCloud' : '' "></div>
+    <div class="mouth-c" :class="animationCloud ? 'animationCloud' : '' "></div>
 
     <!-- land -->
     <div class="land"></div>
@@ -35,6 +36,7 @@
     <div class="g3"></div>
     <div class="g4"></div>
   </div>
+</div>
 </template>
 
 <script>
@@ -42,6 +44,7 @@ export default {
     data: function(){
         return{
             animationMouth: false,
+            animationCloud: false,
         }
     },
     methods:{
@@ -51,18 +54,31 @@ export default {
                 console.log(this.animationMouth)
 
            },1800)
+        },
+
+        setClassCloud(){
+            setInterval(()=>{
+                this.animationCloud = !this.animationCloud
+            },3000)
+        
         }
     
     },
     created(){
         this.setClassSun()
+        this.setClassCloud()
     }
 }
 </script>
 
 <style lang='scss' scoped>
+    .bg-my{
+        background-color: lightsalmon;
+        height: calc(100vh - 83.19px);
+        padding-top:  50px;
+    }
     .cont-img{
-        margin-top: 50px;
+        
         height: 500px;
         background: lightblue;
        
@@ -139,7 +155,17 @@ export default {
             border-top: 3px solid pink;
             border-radius: 50%;
         }
-
+        
+        .animationCloud{
+            animation: MoveC 2s linear;     
+        }
+        @keyframes MoveC {
+            0%{ transform: translate(0, 0);}
+            25%{ transform: translate(-10px, 10px);}
+            50%{ transform: translate(-10px, -10px);}
+            75%{ transform: translate(50px, -10px);}
+            100%{ transform: translate(0, 0);}
+        }
         /* land */
         .land{
             position: absolute;

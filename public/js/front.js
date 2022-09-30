@@ -2152,7 +2152,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      animationMouth: false
+      animationMouth: false,
+      animationCloud: false
     };
   },
   methods: {
@@ -2163,10 +2164,18 @@ __webpack_require__.r(__webpack_exports__);
         _this.animationMouth = !_this.animationMouth;
         console.log(_this.animationMouth);
       }, 1800);
+    },
+    setClassCloud: function setClassCloud() {
+      var _this2 = this;
+
+      setInterval(function () {
+        _this2.animationCloud = !_this2.animationCloud;
+      }, 3000);
     }
   },
   created: function created() {
     this.setClassSun();
+    this.setClassCloud();
   }
 });
 
@@ -2566,31 +2575,42 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
+    staticClass: "bg-my"
+  }, [_c("div", {
     staticClass: "container-lg cont-img position-relative"
   }, [_c("div", {
-    staticClass: "c1"
+    staticClass: "c1",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
-    staticClass: "c2"
+    staticClass: "c2",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
-    staticClass: "c3"
+    staticClass: "c3",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
-    staticClass: "c4"
+    staticClass: "c4",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
-    staticClass: "c5"
+    staticClass: "c5",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
-    staticClass: "c6"
+    staticClass: "c6",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
     staticClass: "eye-c",
+    "class": _vm.animationCloud ? "animationCloud" : "",
     attrs: {
       id: "left"
     }
   }), _vm._v(" "), _c("div", {
     staticClass: "eye-c",
+    "class": _vm.animationCloud ? "animationCloud" : "",
     attrs: {
       id: "right"
     }
   }), _vm._v(" "), _c("div", {
-    staticClass: "mouth-c"
+    staticClass: "mouth-c",
+    "class": _vm.animationCloud ? "animationCloud" : ""
   }), _vm._v(" "), _c("div", {
     staticClass: "land"
   }), _vm._v(" "), _c("div", {
@@ -2634,7 +2654,7 @@ var render = function render() {
     staticClass: "g3"
   }), _vm._v(" "), _c("div", {
     staticClass: "g4"
-  })]);
+  })])]);
 };
 
 var staticRenderFns = [function () {
@@ -2795,7 +2815,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cont-img[data-v-39741d89] {\n  margin-top: 50px;\n  height: 500px;\n  background: lightblue;\n  /* cloud */\n  /* land */\n  /* sun */\n  /* signal */\n}\n.cont-img .c1[data-v-39741d89], .cont-img .c2[data-v-39741d89], .cont-img .c3[data-v-39741d89], .cont-img .c4[data-v-39741d89], .cont-img .c5[data-v-39741d89], .cont-img .c6[data-v-39741d89] {\n  position: absolute;\n  background-color: white;\n}\n.cont-img .c1[data-v-39741d89] {\n  border-radius: 50% 50% 0 30%;\n  top: 40px;\n  left: 40px;\n  width: 50px;\n  height: 50px;\n}\n.cont-img .c2[data-v-39741d89] {\n  border-radius: 50%;\n  top: 20px;\n  left: 70px;\n  width: 70px;\n  height: 70px;\n}\n.cont-img .c3[data-v-39741d89] {\n  border-radius: 50% 50% 30% 30%;\n  top: 40px;\n  left: 120px;\n  width: 50px;\n  height: 50px;\n}\n.cont-img .c4[data-v-39741d89] {\n  top: 70px;\n  left: 40px;\n  width: 130px;\n  height: 50px;\n  border-radius: 0 0 50% 50%;\n  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.267);\n}\n.cont-img .c5[data-v-39741d89] {\n  top: 60px;\n  left: 130px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n}\n.cont-img .c6[data-v-39741d89] {\n  top: 60px;\n  left: 25px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.267);\n}\n.cont-img .eye-c[data-v-39741d89] {\n  position: absolute;\n  border-radius: 50%;\n  background-color: black;\n  width: 10px;\n  height: 10px;\n}\n.cont-img #left[data-v-39741d89] {\n  top: 75px;\n  left: 85px;\n}\n.cont-img #right[data-v-39741d89] {\n  top: 75px;\n  left: 105px;\n}\n.cont-img .mouth-c[data-v-39741d89] {\n  position: absolute;\n  left: 96px;\n  top: 90px;\n  width: 7px;\n  height: 7px;\n  border-top: 3px solid pink;\n  border-radius: 50%;\n}\n.cont-img .land[data-v-39741d89] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 45px;\n  background-color: rgb(55, 158, 55);\n}\n.cont-img .sun[data-v-39741d89] {\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: orange;\n  width: 150px;\n  height: 150px;\n  border-radius: 0 0 0 100%;\n  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.267);\n}\n.cont-img .eye-s[data-v-39741d89] {\n  position: absolute;\n  top: 75px;\n  width: 15px;\n  height: 15px;\n  background-color: black;\n  border-radius: 50%;\n}\n.cont-img #left-s[data-v-39741d89] {\n  right: 90px;\n}\n.cont-img #right-s[data-v-39741d89] {\n  right: 65px;\n}\n.cont-img .white-dot[data-v-39741d89] {\n  position: absolute;\n  top: 79px;\n  background-color: white;\n  border-radius: 50%;\n  width: 5px;\n  height: 5px;\n}\n.cont-img #right-w[data-v-39741d89] {\n  right: 67px;\n}\n.cont-img #left-w[data-v-39741d89] {\n  right: 92px;\n}\n.cont-img #mouth-s[data-v-39741d89] {\n  position: absolute;\n  top: 90px;\n  right: 83px;\n  width: 5px;\n  height: 9px;\n  background-color: rgb(204, 26, 26);\n  border-radius: 50%;\n}\n.cont-img .animationMouth[data-v-39741d89] {\n  -webkit-animation: closeM-39741d89 2s linear;\n          animation: closeM-39741d89 2s linear;\n}\n@-webkit-keyframes closeM-39741d89 {\n0% {\n    height: 9px;\n}\n50% {\n    height: 0px;\n}\n100% {\n    height: 9px;\n}\n}\n@keyframes closeM-39741d89 {\n0% {\n    height: 9px;\n}\n50% {\n    height: 0px;\n}\n100% {\n    height: 9px;\n}\n}\n.cont-img .signal-cont[data-v-39741d89] {\n  width: 200px;\n  height: 100px;\n  background-color: rgb(185, 178, 111);\n  position: absolute;\n  left: 370px;\n  top: 50%;\n  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.267);\n  z-index: 1;\n}\n.cont-img .signal-cont div[data-v-39741d89] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.cont-img .signal-cont div h1[data-v-39741d89] {\n  margin-top: 20px;\n  font-size: 3rem;\n  font-weight: 600;\n}\n.cont-img .triangle[data-v-39741d89] {\n  width: 0px;\n  height: 0px;\n  border: 50px solid transparent;\n  border-top: 0;\n  border-bottom: 70px solid rgb(185, 178, 111);\n  transform: rotate(90deg);\n  position: absolute;\n  top: 53%;\n  left: 554px;\n}\n.cont-img .leg[data-v-39741d89] {\n  position: absolute;\n  top: calc(50% + 100px);\n  left: 450px;\n  width: 25px;\n  height: 110px;\n  background-color: rgb(185, 178, 111);\n  box-shadow: -3px 0 3px rgba(0, 0, 0, 0.267);\n}\n.cont-img .base-g[data-v-39741d89] {\n  background-color: rgb(55, 158, 55);\n  width: 30px;\n  height: 15px;\n  position: absolute;\n  left: 445px;\n  bottom: 30px;\n}\n.cont-img .g1[data-v-39741d89], .cont-img .g2[data-v-39741d89], .cont-img .g3[data-v-39741d89], .cont-img .g4[data-v-39741d89] {\n  position: absolute;\n  background-color: rgb(55, 158, 55);\n}\n.cont-img .g1[data-v-39741d89] {\n  height: 30px;\n  width: 3px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(-20deg);\n  bottom: 30px;\n  left: 445px;\n  z-index: 1;\n}\n.cont-img .g2[data-v-39741d89] {\n  height: 45px;\n  width: 5px;\n  border-radius: 180% 180% 0 0;\n  bottom: 30px;\n  left: 460px;\n  z-index: 1;\n}\n.cont-img .g3[data-v-39741d89] {\n  height: 40px;\n  width: 5px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(-20deg);\n  bottom: 30px;\n  left: 450px;\n  z-index: 1;\n}\n.cont-img .g4[data-v-39741d89] {\n  height: 35px;\n  width: 4px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(20deg);\n  bottom: 30px;\n  left: 470px;\n  z-index: 1;\n}", ""]);
+exports.push([module.i, ".bg-my[data-v-39741d89] {\n  background-color: lightsalmon;\n  height: calc(100vh - 83.19px);\n  padding-top: 50px;\n}\n.cont-img[data-v-39741d89] {\n  height: 500px;\n  background: lightblue;\n  /* cloud */\n  /* land */\n  /* sun */\n  /* signal */\n}\n.cont-img .c1[data-v-39741d89], .cont-img .c2[data-v-39741d89], .cont-img .c3[data-v-39741d89], .cont-img .c4[data-v-39741d89], .cont-img .c5[data-v-39741d89], .cont-img .c6[data-v-39741d89] {\n  position: absolute;\n  background-color: white;\n}\n.cont-img .c1[data-v-39741d89] {\n  border-radius: 50% 50% 0 30%;\n  top: 40px;\n  left: 40px;\n  width: 50px;\n  height: 50px;\n}\n.cont-img .c2[data-v-39741d89] {\n  border-radius: 50%;\n  top: 20px;\n  left: 70px;\n  width: 70px;\n  height: 70px;\n}\n.cont-img .c3[data-v-39741d89] {\n  border-radius: 50% 50% 30% 30%;\n  top: 40px;\n  left: 120px;\n  width: 50px;\n  height: 50px;\n}\n.cont-img .c4[data-v-39741d89] {\n  top: 70px;\n  left: 40px;\n  width: 130px;\n  height: 50px;\n  border-radius: 0 0 50% 50%;\n  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.267);\n}\n.cont-img .c5[data-v-39741d89] {\n  top: 60px;\n  left: 130px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n}\n.cont-img .c6[data-v-39741d89] {\n  top: 60px;\n  left: 25px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.267);\n}\n.cont-img .eye-c[data-v-39741d89] {\n  position: absolute;\n  border-radius: 50%;\n  background-color: black;\n  width: 10px;\n  height: 10px;\n}\n.cont-img #left[data-v-39741d89] {\n  top: 75px;\n  left: 85px;\n}\n.cont-img #right[data-v-39741d89] {\n  top: 75px;\n  left: 105px;\n}\n.cont-img .mouth-c[data-v-39741d89] {\n  position: absolute;\n  left: 96px;\n  top: 90px;\n  width: 7px;\n  height: 7px;\n  border-top: 3px solid pink;\n  border-radius: 50%;\n}\n.cont-img .animationCloud[data-v-39741d89] {\n  -webkit-animation: MoveC-39741d89 2s linear;\n          animation: MoveC-39741d89 2s linear;\n}\n@-webkit-keyframes MoveC-39741d89 {\n0% {\n    transform: translate(0, 0);\n}\n25% {\n    transform: translate(-10px, 10px);\n}\n50% {\n    transform: translate(-10px, -10px);\n}\n75% {\n    transform: translate(50px, -10px);\n}\n100% {\n    transform: translate(0, 0);\n}\n}\n@keyframes MoveC-39741d89 {\n0% {\n    transform: translate(0, 0);\n}\n25% {\n    transform: translate(-10px, 10px);\n}\n50% {\n    transform: translate(-10px, -10px);\n}\n75% {\n    transform: translate(50px, -10px);\n}\n100% {\n    transform: translate(0, 0);\n}\n}\n.cont-img .land[data-v-39741d89] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 45px;\n  background-color: rgb(55, 158, 55);\n}\n.cont-img .sun[data-v-39741d89] {\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: orange;\n  width: 150px;\n  height: 150px;\n  border-radius: 0 0 0 100%;\n  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.267);\n}\n.cont-img .eye-s[data-v-39741d89] {\n  position: absolute;\n  top: 75px;\n  width: 15px;\n  height: 15px;\n  background-color: black;\n  border-radius: 50%;\n}\n.cont-img #left-s[data-v-39741d89] {\n  right: 90px;\n}\n.cont-img #right-s[data-v-39741d89] {\n  right: 65px;\n}\n.cont-img .white-dot[data-v-39741d89] {\n  position: absolute;\n  top: 79px;\n  background-color: white;\n  border-radius: 50%;\n  width: 5px;\n  height: 5px;\n}\n.cont-img #right-w[data-v-39741d89] {\n  right: 67px;\n}\n.cont-img #left-w[data-v-39741d89] {\n  right: 92px;\n}\n.cont-img #mouth-s[data-v-39741d89] {\n  position: absolute;\n  top: 90px;\n  right: 83px;\n  width: 5px;\n  height: 9px;\n  background-color: rgb(204, 26, 26);\n  border-radius: 50%;\n}\n.cont-img .animationMouth[data-v-39741d89] {\n  -webkit-animation: closeM-39741d89 2s linear;\n          animation: closeM-39741d89 2s linear;\n}\n@-webkit-keyframes closeM-39741d89 {\n0% {\n    height: 9px;\n}\n50% {\n    height: 0px;\n}\n100% {\n    height: 9px;\n}\n}\n@keyframes closeM-39741d89 {\n0% {\n    height: 9px;\n}\n50% {\n    height: 0px;\n}\n100% {\n    height: 9px;\n}\n}\n.cont-img .signal-cont[data-v-39741d89] {\n  width: 200px;\n  height: 100px;\n  background-color: rgb(185, 178, 111);\n  position: absolute;\n  left: 370px;\n  top: 50%;\n  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.267);\n  z-index: 1;\n}\n.cont-img .signal-cont div[data-v-39741d89] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.cont-img .signal-cont div h1[data-v-39741d89] {\n  margin-top: 20px;\n  font-size: 3rem;\n  font-weight: 600;\n}\n.cont-img .triangle[data-v-39741d89] {\n  width: 0px;\n  height: 0px;\n  border: 50px solid transparent;\n  border-top: 0;\n  border-bottom: 70px solid rgb(185, 178, 111);\n  transform: rotate(90deg);\n  position: absolute;\n  top: 53%;\n  left: 554px;\n}\n.cont-img .leg[data-v-39741d89] {\n  position: absolute;\n  top: calc(50% + 100px);\n  left: 450px;\n  width: 25px;\n  height: 110px;\n  background-color: rgb(185, 178, 111);\n  box-shadow: -3px 0 3px rgba(0, 0, 0, 0.267);\n}\n.cont-img .base-g[data-v-39741d89] {\n  background-color: rgb(55, 158, 55);\n  width: 30px;\n  height: 15px;\n  position: absolute;\n  left: 445px;\n  bottom: 30px;\n}\n.cont-img .g1[data-v-39741d89], .cont-img .g2[data-v-39741d89], .cont-img .g3[data-v-39741d89], .cont-img .g4[data-v-39741d89] {\n  position: absolute;\n  background-color: rgb(55, 158, 55);\n}\n.cont-img .g1[data-v-39741d89] {\n  height: 30px;\n  width: 3px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(-20deg);\n  bottom: 30px;\n  left: 445px;\n  z-index: 1;\n}\n.cont-img .g2[data-v-39741d89] {\n  height: 45px;\n  width: 5px;\n  border-radius: 180% 180% 0 0;\n  bottom: 30px;\n  left: 460px;\n  z-index: 1;\n}\n.cont-img .g3[data-v-39741d89] {\n  height: 40px;\n  width: 5px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(-20deg);\n  bottom: 30px;\n  left: 450px;\n  z-index: 1;\n}\n.cont-img .g4[data-v-39741d89] {\n  height: 35px;\n  width: 4px;\n  border-radius: 0 180% 0 0;\n  transform: rotate(20deg);\n  bottom: 30px;\n  left: 470px;\n  z-index: 1;\n}", ""]);
 
 // exports
 
