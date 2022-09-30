@@ -6,7 +6,7 @@
             </div>
             <div class='box2-cont'>
                 <div class='box2'>
-                    <img src="https://media.discordapp.net/attachments/984731529261481984/1019529442785239050/0e47fc97-eb83-499f-ab8b-3cee86ae2851.gif" alt="">
+                    <img src="https://cdn.discordapp.com/attachments/984731529261481984/1025316805784371280/calagif.gif" alt="">
                 </div>
             </div>
         </div>
